@@ -1,23 +1,30 @@
-<script type="text/javascript" src="/js/bills.js"></script>
 <link rel="stylesheet" href="/css/bills.css" />
 <div class="col-lg-12 bills-container">
   <h3>
     Bills
   </h3>
-<div class="groups-container">
-  <button class="btn btn-primary add-group groupFormToggle" id="createGroup">Create a new group</button>
-    <div class="group-form">
-      <form class="upload-group animated fadeIn" id="createGroupForm">
+<div class="bills-container">
+    <div class="bill-form">
+      <form class="create-bill animated fadeIn" id="createBillForm">
         <div class="form-group track-name-block">
-            <label for="group-name">Group Name</label>
-            <input type="text" class="form-control" id="group-name" placeholder="Your group name">
+            <label for="group-name">Bill name</label>
+            <input type="text" class="form-control" id="bill-name" placeholder="Your bill name">
         </div>
-        <div class="form-group friends-block">
-          <select class="select-friends">
+        <div class="form-group payee-block">
+          <label for="payee">Amount</label>
+          <input id="bill-amount" type="number">
+        </div>
+        <div class="form-block payee-block">
+          <label for="payee">Who paid?</label>
+          <select class="select-friend">
           </select>
         </div>
-        <button class="btn btn-primary submit-group" id="submitGroup">Create group</button>
+        <button class="btn btn-primary submit-bill" id="submitBill">Compute</button>
       </form>
+  </div>
+  <div class="compute-block">
+    <span class="message">The shares are yet to be calculated</span>
   </div>
 </div>
 </div>
+<script type="text/javascript" src="/js/bills.js"></script>
