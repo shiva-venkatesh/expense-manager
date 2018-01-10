@@ -21,14 +21,11 @@ $.get('/groups/friends', function(friends) {
 })
 
 var payee = $(".select-friend option:selected").text()
-$('#submitBill').click(function() {
-  debugger
+$('#createBillForm').submit(function(e) {
   var amount = $('#bill-amount').val()
   var group = localStorage.getItem('newGroup')
   var filteredGroupArray = JSON.parse(group)
   console.log(filteredGroupArray)
-  $('#createBillForm').hide()
-  $('.message').hide()
   var groupMembers = filteredGroupArray.friends.CamelCaseToArray()
   var groupStrength = groupMembers.length
   var payeeGetsBack = amount - (amount/groupStrength)
@@ -40,4 +37,7 @@ $('#submitBill').click(function() {
       $('.compute-block').append('<span>' + member + 'owes ' + (amount/groupStrength) + '</span>' )
     }
   })
+  $('#createBillForm').hide()
+  $('.message').hide()
+  e.preventDefault()
 })
