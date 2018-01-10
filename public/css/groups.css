@@ -1,0 +1,14 @@
+.group-form {
+  padding-top: 10px;
+}
+
+.select-friends {
+  width 100%;
+}
+
+.friends-block {
+  display: flex;
+  flex-direction: column;
+  height: 35px;
+  width: 100%;
+}
