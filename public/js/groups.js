@@ -1,6 +1,3 @@
-// $('#createGroup').click(function(e) {
-//   $('#createGroupForm').removeClass("hide")
-// })
 var filteredFriend = {}
 var filteredArray = []
 $.get('/groups/friends', function(friends) {
@@ -17,13 +14,14 @@ $.get('/groups/friends', function(friends) {
   console.log($(".select-group option:selected").text())
 })
 
-$('#submitGroup').click(function() {
-  debugger
+function saveGroup() {
+  var selectedFriends = $(".select-friends option:selected").text()
   var newGroup = {
-    name: $('group-name').val(),
+    name: $('#group-name').val(),
     friends: selectedFriends
   }
   console.log(newGroup)
   localStorage.setItem('newGroup', JSON.stringify(newGroup))
   alert('You have created a group!')
-})
+  window.location = '/bills'
+}
