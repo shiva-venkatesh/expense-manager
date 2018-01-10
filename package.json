@@ -1,5 +1,5 @@
 {
-  "name": "loginapp",
+  "name": "Expense Manager",
   "version": "1.0.0",
   "description": "Simple authentication system",
   "main": "app.js",

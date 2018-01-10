@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>LoginApp</title>
+	<title>Expense Manager</title>
 	<link rel="stylesheet" href="/css/bootstrap.css" />
 	<link rel="stylesheet" href="/css/style.css" />
+	<script
+				  src="https://code.jquery.com/jquery-3.2.1.js"
+				  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+				  crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="container">
@@ -19,7 +23,7 @@
             {{/if}}
           </ul>
         </nav>
-        <h3 class="text-muted">LoginApp</h3>
+        <h3 class="text-muted">Expense Manager</h3>
       </div>
 
 
@@ -36,15 +40,15 @@
           {{#if error}}
             <div class="alert alert-danger">{{error}}</div>
           {{/if}}
-          
+
           {{{body}}}
         </div>
 
-        
+
       </div>
 
       <footer class="footer">
-        <p>&copy; 2015 LoginApp, Inc.</p>
+        <p>&copy; 2015 Expense Manager, Inc.</p>
       </footer>
 
     </div> <!-- /container -->
